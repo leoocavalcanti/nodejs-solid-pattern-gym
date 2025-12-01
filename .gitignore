@@ -3,6 +3,4 @@ build
 .env
 coverage
 
-src/lib
-src/repositories
 src/use-cases
