@@ -1,0 +1,9 @@
+node_modules
+build
+.env
+coverage
+
+src/http
+src/lib
+src/repositories
+src/use-cases

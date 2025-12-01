@@ -1,0 +1,77 @@
+SOLID API in Node.js
+
+An API for a GymPass-style application developed in Node.js using TypeScript, Fastify, and Prisma, following SOLID principles for clean, scalable, and maintainable code.
+
+Main Features of the Application
+
+Users: Can register, authenticate, and view their profiles.
+
+Gyms: Can be registered and searched by name or proximity.
+
+Check-ins: Users can check in at gyms, with business rules such as distance validation and daily check-in limits.
+
+Technologies Used
+
+Node.js: JavaScript runtime for server-side execution.
+
+TypeScript: JavaScript superset that adds static typing.
+
+Fastify: Web framework focused on performance and low overhead.
+
+Prisma: ORM for Node.js and TypeScript used to communicate with the PostgreSQL database.
+
+Zod: Schema and type validation library.
+
+Vitest: Testing framework for Vite-based (and Node.js) projects.
+
+Docker: Used to create a development environment with PostgreSQL.
+
+TSX: Runs TypeScript files directly without prior compilation in development.
+
+TSUP: Bundler for TypeScript libraries.
+
+Functional Requirements (FRs)
+
+ User registration must be possible;
+
+ User authentication must be possible;
+
+ It must be possible to retrieve the logged-in user's profile;
+
+ It must be possible to retrieve the number of check-ins performed by the logged-in user;
+
+ It must be possible for the user to retrieve their check-in history;
+
+ Users must be able to search for nearby gyms (within 10 km);
+
+ Users must be able to search for gyms by name;
+
+ Users must be able to check in at a gym;
+
+ It must be possible to validate a user’s check-in;
+
+ It must be possible to register a gym;
+
+Business Rules (BRs)
+
+ Users must not be able to register with a duplicate email;
+
+ Users cannot perform two check-ins on the same day;
+
+ Users cannot check in if they are not close to the gym (100m radius);
+
+ Check-ins can only be validated within 20 minutes of creation;
+
+ Check-ins can only be validated by administrators;
+
+ Gyms can only be registered by administrators;
+
+Non-Functional Requirements (NFRs)
+
+ User passwords must be encrypted;
+
+ Application data must be persisted in a PostgreSQL database;
+
+ All data lists must be paginated with 20 items per page;
+
+ Users must be identified using a JWT (JSON Web Token);
